@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sunset OS</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="day" id="dayText">MONDAY</div>
+
+<div class="settings-overlay" id="settingsOverlay"
+     style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;
+            background:rgba(0,0,0,0.6);
+            justify-content:center;align-items:center;
+            padding:20px;box-sizing:border-box;">
+
+    <div style="background:rgba(20,20,20,0.95);
+                width:90%;
+                max-width:900px;
+                max-height:90vh;
+                overflow-y:auto;
+                padding:25px;
+                border-radius:20px;
+                box-shadow:0 10px 40px rgba(0,0,0,0.5);">
+
+        <button onclick="toggleSettings()">Close</button>
+
+        <h2>Settings</h2>
+
+        <h3>Panic Key (Schoology redirect)</h3>
+        <h3>(`) is panic key.</h3>
+
+<h3>Tab Cloaking</h3>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;">
+
+    <button onclick="setCloak('default')" 
+        style="padding:10px;border-radius:10px;border:none;cursor:pointer;">
+        Default
+    </button>
+
+    <button onclick="setCloak('google')" 
+        style="padding:10px;border-radius:10px;border:none;cursor:pointer;">
+        Google Drive
+    </button>
+
+    <button onclick="setCloak('gmail')" 
+        style="padding:10px;border-radius:10px;border:none;cursor:pointer;">
+        Gmail
+    </button>
+
+    <button onclick="setCloak('schoology')" 
+        style="padding:10px;border-radius:10px;border:none;cursor:pointer;">
+        Schoology
+    </button>
+
+</div>
+        <h3>Background</h3>
+
+        <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:10px;">
+
+            <div onclick="setBG(this)"
+                 style="width:100%;height:100px;background:url('https://wallpapercave.com/uwp/uwp4960818.jpeg');background-size:cover;background-position:center;border-radius:10px;cursor:pointer;"></div>
+
+            <div onclick="setBG(this)"
+                 style="width:100%;height:100px;background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');background-size:cover;background-position:center;border-radius:10px;cursor:pointer;"></div>
+
+            <div onclick="setBG(this)"
+                 style="width:100%;height:100px;background:url('https://wallpapercave.com/uwp/uwp4960449.jpeg');background-size:cover;background-position:center;border-radius:10px;cursor:pointer;"></div>
+
+            <div onclick="setBG(this)"
+                 style="width:100%;height:100px;background:url('https://4kwallpapers.com/images/walls/thumbs_3t/25229.jpg');background-size:cover;background-position:center;border-radius:10px;cursor:pointer;"></div>
+
+            <div onclick="setBG(this)"
+                 style="width:100%;height:100px;background:url('https://4kwallpapers.com/images/walls/thumbs_3t/26035.jpg');background-size:cover;background-position:center;border-radius:10px;cursor:pointer;"></div>
+
+            <div onclick="setBG(this)"
+                 style="width:100%;height:100px;background:url('https://4kwallpapers.com/images/walls/thumbs_3t/24457.jpg');background-size:cover;background-position:center;border-radius:10px;cursor:pointer;"></div>
+
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+<body>
+
+<div class="day" id="dayText">MONDAY</div>
+
+<!-- Fullscreen Library -->
+<div class="library-overlay" id="libraryOverlay">
+    <button class="close-btn" onclick="toggleLibrary()">Close</button>
+
+    <input type="text" id="searchApps" placeholder="Search apps..." onkeyup="searchApps()">
+
+    <div class="library-grid" id="libraryGrid">
+
+<div class="library-item" data-name="Netflix" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://learningaboutmvies.b-cdn.net/')">
+    <div class="library-icon" style="background-image:url('https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/15844974/netflixlogo.0.0.1466448626.png?quality=90&strip=all&crop=1.2535702951444,0,97.492859409711,100')"></div>
+    <div class="library-name">Netflix</div>
+</div>
+
+<div class="library-item" data-name="Roblox" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://nowgg.fun%2Fapps%2Fa%2F19900%2Fb.html')">
+    <div class="library-icon" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roblox_Corporation_2025_logo.svg/960px-Roblox_Corporation_2025_logo.svg.png')"></div>
+    <div class="library-name">Roblox</div>
+</div>
+
+<div class="library-item" data-name="Spotify" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://music.youtube.com/?hl=en')">
+    <div class="library-icon" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/500px-Spotify_App_Logo.svg.png?_=20210620075506')"></div>
+    <div class="library-name">Spotify</div>
+</div>
+
+<div class="library-item" data-name="PSify" onclick="openApp('https://thisissonobodyplaysgame.github.io/psify')">
+    <div class="library-icon" style="background-image:url('https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/01/Playstation-logo-1.jpg')"></div>
+    <div class="library-name">PSify</div>
+</div>
+
+<div class="library-item" data-name="GeForce" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://play.geforcenow.com')">
+    <div class="library-icon" style="background-image:url('https://play-lh.googleusercontent.com/_-b_HQXrVyyhZSHj_BoE9u_-cxkcHDH_yLX5rDjJsFMIfsCNQs9F3QP4JvEFcWaSIz0')"></div>
+    <div class="library-name">GeForce</div>
+</div>
+
+<div class="library-item" data-name="TikTok" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://tiktok.com/foryou')">
+    <div class="library-icon" style="background-image:url('https://img.freepik.com/premium-vector/tik-tok-logo_578229-290.jpg?semt=ais_hybrid&w=740&q=80')"></div>
+    <div class="library-name">TikTok</div>
+</div>
+
+<div class="library-item" data-name="ChatGPT" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://chatgpt.com')">
+    <div class="library-icon" style="background-image:url('https://store-images.s-microsoft.com/image/apps.14785.14423064005243201.42399137-369b-40bb-b5be-ac2f079c41bf.b1d6d110-9d93-441f-ac20-2e04fd7dfe3c?h=210')"></div>
+    <div class="library-name">ChatGPT</div>
+</div>
+        <div class="library-item" data-name="Discord" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://discord.gg')">
+            <div class="library-icon" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoCkY_K9TX2dN21sxK2Np0a2vqnKKHGWP7Ow&amp')"></div>
+            <div class="library-name">Discord</div>
+        </div>
+
+        <div class="library-item" data-name="Kahoot" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://kahoot-bot.net/')">
+            <div class="library-icon" style="background-image:url('https://m.media-amazon.com/images/I/41d3TNh83QL.png')"></div>
+            <div class="library-name">Kahoot Flooder</div>
+        </div>
+
+        <div class="library-item" data-name="Blooket" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://blooketbot.schoolcheats.net/')">
+            <div class="library-icon" style="background-image:url('https://theoretical-amber-feokxpxuh3.edgeone.app/ChatGPT%20Image%20Apr%2020,%202026,%2009_50_57%20PM.png')"></div>
+            <div class="library-name">Blooket Hacks</div>
+        </div>
+
+        <div class="library-item" data-name="GTA Vice City" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://t9os.space/gtavc')">
+            <div class="library-icon" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3w1PK7yW2YbG76OJw1XPe1ke99ucQ93B9nUmNEmXghYGKghLI4BpStc2Y7GPMkiE35ReSCkUnNO6E7FvwZIU-fDXpVk7OaeiJF6RhKDl05BIZf3qWdu8W-TLuWaaeHYk&amp')"></div>
+            <div class="library-name">Vice City</div>
+        </div>
+                <div class="library-item" data-name="Xbox Cloud Gaming" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://www.xbox.com/en-us/play')">
+            <div class="library-icon" style="background-image:url('https://play-lh.googleusercontent.com/hihXCV-0wxOXB5N7uBREaJeCVK0BDjNEBtKwNAncftZMflpEvasiKXn7vCKxu9qGpvk=w512-h512-rw')"></div>
+            <div class="library-name">Xbox</div>
+        </div>
+                <div class="library-item" data-name="Calculator" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://thisissonobodyplaysgame.github.io/calc/')">
+            <div class="library-icon" style="background-image:url('https://cdn.pixabay.com/photo/2022/05/08/03/10/calculator-7181192_960_720.png')"></div>
+            <div class="library-name">Calculator</div>
+        </div>
+                        <div class="library-item" data-name="Messages" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://sunsetchatting.base44.app/')">
+            <div class="library-icon" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/5/51/IMessage_logo.svg')"></div>
+            <div class="library-name">Messages</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Dock -->
+<div class="dock" id="dock">
+
+<div class="app library-app" onclick="toggleLibrary()">
+    <div style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;">
+        <img src="https://static.thenounproject.com/png/5443009-200.png"
+             style="width:32px;height:32px;pointer-events:none;">
+    </div>
+</div>
+
+    <div class="app" data-name="Netflix" data-icon="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/15844974/netflixlogo.0.0.1466448626.png?quality=90&strip=all&crop=1.2535702951444,0,97.492859409711,100" style="background-image:url('https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/15844974/netflixlogo.0.0.1466448626.png?quality=90&strip=all&crop=1.2535702951444,0,97.492859409711,100')" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://learningaboutmvies.b-cdn.net/')"></div>
+
+    <div class="app" data-name="Roblox" data-icon="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roblox_Corporation_2025_logo.svg/960px-Roblox_Corporation_2025_logo.svg.png" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roblox_Corporation_2025_logo.svg/960px-Roblox_Corporation_2025_logo.svg.png')" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://nowgg.fun%2Fapps%2Fa%2F19900%2Fb.html')"></div>
+
+    <div class="app" data-name="Spotify" data-icon="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/500px-Spotify_App_Logo.svg.png?_=20210620075506" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/500px-Spotify_App_Logo.svg.png?_=20210620075506')" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://music.youtube.com/?hl=en')"></div>
+    
+    <div class="app" data-name="PSify" data-icon="https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/01/Playstation-logo-1.jpg" style="background-image:url('https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/01/Playstation-logo-1.jpg')" onclick="openApp('https://thisissonobodyplaysgame.github.io/psify')"></div>
+    
+    <div class="app" data-name="GeForce" data-icon="https://play-lh.googleusercontent.com/_-b_HQXrVyyhZSHj_BoE9u_-cxkcHDH_yLX5rDjJsFMIfsCNQs9F3QP4JvEFcWaSIz0" style="background-image:url('https://play-lh.googleusercontent.com/_-b_HQXrVyyhZSHj_BoE9u_-cxkcHDH_yLX5rDjJsFMIfsCNQs9F3QP4JvEFcWaSIz0')" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://play.geforcenow.com')"></div>
+        
+    <div class="app" data-name="TikTok" data-icon="https://img.freepik.com/premium-vector/tik-tok-logo_578229-290.jpg?semt=ais_hybrid&w=740&q=80" style="background-image:url('https://img.freepik.com/premium-vector/tik-tok-logo_578229-290.jpg?semt=ais_hybrid&w=740&q=80')" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://tiktok.com/foryou')"></div>
+        
+    <div class="app" data-name="ChatGPT" data-icon="https://store-images.s-microsoft.com/image/apps.14785.14423064005243201.42399137-369b-40bb-b5be-ac2f079c41bf.b1d6d110-9d93-441f-ac20-2e04fd7dfe3c?h=210" style="background-image:url('https://store-images.s-microsoft.com/image/apps.14785.14423064005243201.42399137-369b-40bb-b5be-ac2f079c41bf.b1d6d110-9d93-441f-ac20-2e04fd7dfe3c?h=210')" onclick="openApp('https://learningaboutschoolwork.b-cdn.net/embed.html?url=https://chatgpt.com')"></div>
+	<div class="app" onclick="toggleSettings()"
+style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Settings_%28iOS%29.png/500px-Settings_%28iOS%29.png')"></div>
+
+</div>
+
+<div class="clock" id="clock"></div>
+
+
+<div class="clock" id="clock"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
